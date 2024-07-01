@@ -51,23 +51,28 @@ When the download and decryption are completed, you'll have a new folder contain
 
 **Sometimes you may need to extract the zip file in order to create the flashable firmware files.**
 
-1. Copy the firmware file that starts with 'AP_' and the APK file for Magisk downloaded from the required files section to the device via USB.
-2. Once finished, open the Files app and select 'Application Files' and tap on `app-release.apk` or whatever the APK file is named.
-3. Give the appropriate install permissions to install.
-4. Open the newly installed app.
-5. At the top, select 'Install'.
-6. Then, press the radial button for 'Select and Patch a File'.
-7. This will open the file browser; find the AP_ file and tap it.
-It will take a few minutes to patch the AP file.
-8. Once completed, copy the 'magisk_patched-` file from the Download directory of the device back to your PC so we can flash it in place of the original.
+1. Install the driver from the 'Software Requirements' section above.
+2. Plug up your device via USB to your PC.
+3. Copy the firmware file that starts with 'AP_' and the APK file for Magisk downloaded from the 'Software Requirements' section to the device.
+4. Once finished, open the Files app and select 'Application Files' and tap on `app-release.apk` or whatever the APK file is named.
+5. Give the appropriate install permissions to install.
+6. Open the newly installed app.
+7. At the top, select 'Install'.
+8. Then, press the radial button for 'Select and Patch a File'.
+9. This will open the file browser; find the AP_ file and tap it.
+
+**It will take a few minutes to patch the AP file.**
+
+10. Once completed, copy the 'magisk_patched-` file from the Download directory of the device back to your PC so we can flash it in place of the original.
 
 ### Step 5: Install Patched Firmware
 1. Run Odin and do the following:
-   - Switch tabs on the left to 'Options' and untoggle the 'Auto Reboot' option.
-   - Press BL and select the **BL_** file.
-   - Press AP and select the **magisk_patched-** file.
-   - Press CSC and select the **CSC_** file.
-     - **Do not use Home_CSC** because that will not erase all the user data, which is imperative.
+   - Switch tabs on the left to 'Options' and untoggle the 'Auto Reboot' option.
+   - Press BL and select the **BL_** file.
+   - Press AP and select the **magisk_patched-** file.
+   - Press CSC and select the **CSC_** file.
+
+**Do not use Home_CSC** because that will not erase all the user data, which is imperative.
 
 2. Unplug the USB from the device and power it down.
 3. After a few seconds, press and hold the **Volume Up** and **Volume Down** buttons while reconnecting the USB cable from the PC to the device.
@@ -79,12 +84,12 @@ It will take a few minutes to patch the AP file.
 After completing the flash, we do not want the device to auto-reboot.
 1. Once Odin says PASS in green, you can unplug the USB and press and hold **Power** and **Volume Down** to reboot the device.
 2. When the screen blanks out, continue holding Power but switch from holding **Volume Down** to holding **Volume Up**. If done right, it'll reboot into recovery mode.
-   - If not, the device will reboot a few times and boot itself into recovery automatically.
-3. Select **Wipe data/factory reset**. The device will reboot on its own and take you to the Welcome! screen once finished.
+3. If not, the device will reboot a few times and boot itself into recovery automatically.
+4. Select **Wipe data/factory reset**. The device will reboot on its own and take you to the Welcome! screen once finished.
 
 ### Step 7: Finalize the Root
 1. Complete the initial setup. Remember, you must connect to Wi-Fi to see if **OEM Unlock** is still enabled.
 2. Plug the device back into your PC and copy the `magisk.apk` app again to it.
 3. Install Magisk using the method we described above.
-   - This time, when we open the app, a popup will state 'Additional Setup Required'. Click OK, and the device will reboot once again.
-4. After the reboot, you are now the proud owner of an unlocked bootloader that has been rooted with Magisk. Congrats!
+4. This time, when we open the app, a popup will state 'Additional Setup Required'. Click OK, and the device will reboot once again.
+5. After the reboot, you are now the proud owner of an unlocked bootloader that has been rooted with Magisk. Congrats!
