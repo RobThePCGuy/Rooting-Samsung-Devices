@@ -50,7 +50,7 @@ Rooting is the process of gaining privileged control (known as "root access") ov
 Download and place these tools in a dedicated folder for easy access.
 
 1.  **Magisk:** [Download the latest APK from the official GitHub](https://github.com/topjohnwu/Magisk/releases).
-      * *Alternative:* [Kitsune Mask](https://github.com/HuskyDG/magisk-files/releases) (A fork of Magisk).
+      * *Alternative:* [KitsuneMagisk](https://github.com/1q23lyc45/KitsuneMagisk/releases).
 2.  **Odin:** [Patched Odin 3.14.1](https://xdaforums.com/attachments/odin3-v3-14-1_3b_patched-zip.5158507/) (A patched version is often required for custom binaries).
 3.  **Samsung USB Drivers:** [Download from Samsung's Developer Portal](https://developer.samsung.com/galaxy/others/android-usb-driver-for-windows).
 4.  **Firmware Downloader:** [SamloaderKotlin Bifrost](https://github.com/zacharee/SamloaderKotlin/releases).
