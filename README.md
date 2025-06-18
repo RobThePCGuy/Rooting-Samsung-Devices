@@ -11,6 +11,8 @@ This guide provides a detailed, step-by-step process for rooting modern Samsung 
   - [Prerequisites](/README.md#prerequisites)
       - [Hardware & Setup](/README.md#hardware--setup)
       - [Required Software](/README.md#required-software)
+  - [System-as-Root Devices](/README.md#critical-note-for-system-as-root-devices)
+      - [What This Means](/README.md#what-this-means)
   - [Step-by-Step Guide](/README.md#step-by-step-guide)
       - [Step 1: Enable OEM Unlocking](/README.md#step-1-enable-oem-unlocking)
       - [Step 2: Download the Official Firmware](/README.md#step-2-download-the-official-firmware)
@@ -54,6 +56,21 @@ Download and place these tools in a dedicated folder for easy access.
 2.  **Odin:** [Patched Odin 3.14.1](https://xdaforums.com/attachments/odin3-v3-14-1_3b_patched-zip.5158507/) (A patched version is often required for custom binaries).
 3.  **Samsung USB Drivers:** [Download from Samsung's Developer Portal](https://developer.samsung.com/galaxy/others/android-usb-driver-for-windows).
 4.  **Firmware Downloader:** [SamloaderKotlin Bifrost](https://github.com/zacharee/SamloaderKotlin/releases).
+
+### Critical Note for System-as-Root Devices
+> **Please read this section carefully, as it applies to most modern Samsung devices.**
+>
+> When you first install the Magisk app (in Step 4), it may detect and display information about your device. If you see a line that says **`Ramdisk: No`**, this is normal. It means your device has a **"System-as-Root"** configuration.
+
+#### What This Means
+
+> For these devices, Magisk must install itself into the device's `recovery` partition. Consequently, one step in this guide becomes the most important part of the entire process:
+>
+> **Step 6 (`Wipe data/factory reset`) is NOT an optional cleanup step. It is a MANDATORY and essential part of the Magisk installation.**
+>
+> When you boot into recovery *after* flashing the patched file with Odin and select `Wipe data/factory reset`, you are triggering the script that finalizes the Magisk setup. Without this specific step, your device will not be rooted.
+>
+> If you perform this step correctly, you will likely **NOT** see the "Additional Setup Required" pop-up in Magisk at the very end. This is a good sign, confirming the installation was successful on the first boot.
 
 ## Step-by-Step Guide
 
